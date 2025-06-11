@@ -493,7 +493,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(119,243,158,.5);
   background: linear-gradient(90deg, #77f39e 0%, #458d5c 100%);
   font-family: var(--font-family);
   font-weight: 500;
@@ -519,6 +518,7 @@ li {
   width: 100%;
   height: 100%;
   background: #26332a;
+  border: 1px solid rgba(119,243,158,.5);
   transition: opacity .3s ease-in-out;
   z-index: 1000;
 }
@@ -1784,7 +1784,6 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 62.5rem;
     height: 100%;
     position: relative;
     z-index: 10;
@@ -1936,22 +1935,209 @@ li {
 
 @media screen and (max-width: 450px) {
   .title {
-    width: 379px;
-    font-size: 45px;
+    width: 375px;
+    font-size: 42px;
   }
 
   [class*=__container] {
-    max-width: 100;
+    max-width: 100%;
+  }
+
+  .promo {
+    display: block;
+  }
+
+  .promo__info {
+    padding-left: 30px;
+    margin-left: 50px;
+  }
+
+  .promo__info::before {
+    display: none;
+  }
+
+  .about__container {
+    padding: 92px 1px;
+    justify-content: center;
+  }
+
+  .about__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .about__info::after {
+    display: none;
+  }
+
+  .about__descr {
+    font-size: 22px;
+  }
+
+  .about__btn {
+    width: 375px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .about__title {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__title-first {
+    width: 375px;
+    font-size: 34px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .about__title-second {
+    margin-top: -13px;
+    font-size: 34px;
+    line-height: 120%;
+    text-align: center !important;
+  }
+
+  .about__title-third {
+    margin-top: -4px;
+    font-size: 34px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .about__btn {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 350px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .start {
+    margin-bottom: 100px;
+  }
+
+  .start__wrapper {
+    margin-top: 50px;
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: repeat(1, minmax(250px, 375px));
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .start__title {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .format__container {
+    flex-wrap: wrap;
+    padding: 70px 5px;
+  }
+
+  .format__btn {
+    margin: 0;
+    margin-top: 120px;
+    padding: 0;
+  }
+
+  .contact {
+    display: block;
   }
 
   .contact__container {
-    width: 430px;
+    width: 100%;
     padding: 50px 10px 50px 5px;
+    align-items: center;
+  }
+
+  .contact__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact__title {
-    width: 406px;
-    font-size: 57px;
+    width: 100%;
+    font-size: 50px;
     line-height: 85%;
+  }
+
+  .contact__descr {
+    width: 100%;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 124%;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  .contact__input {
+    height: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 16px;
+    width: 320px;
+    height: 28px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--black);
+  }
+
+  .contact__btn {
+    width: 340px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .contact__btn::before {
+    font-size: 18px;
+  }
+
+  .footer__container {
+    overflow: hidden;
+  }
+
+  .footer__button {
+    width: 340px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .footer__btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__year,
+  .footer__protect {
+    white-space: nowrap;
   }
 }
